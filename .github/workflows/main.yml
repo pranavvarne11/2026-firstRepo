@@ -16,4 +16,5 @@ jobs:
       - name: Build application
         run: |
           echo "Build application here pranav "
+          docker version
           # mvn clean package
