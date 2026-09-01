@@ -6,6 +6,7 @@ on:
       - master
 
 jobs:
+
   docker-1:
     runs-on: ubuntu-latest
 
@@ -15,17 +16,21 @@ jobs:
 
       - name: Build application
         run: |
-          echo "Build application here pranav "
-          echo "${{ secrets.AWS_ACCESS_KEY_ID }}"
+          echo "Build application here pranav"
+          echo "AWS secret is configured"
           docker version
           # mvn clean package
 
-   docker-2:
+  docker-2:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout source
         uses: actions/checkout@v4
+
+      - name: Build application
+        run: |
+          echo "Build application here pranav 2222222222"
 
       - name: Build application
         run: |
